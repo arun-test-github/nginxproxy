@@ -1,0 +1,14 @@
+pipeline {
+    
+    agent any   
+    stages{
+        stage("Git SCM"){
+            
+            
+            steps{
+                git credentialsId: 'docker-hub', url: 'https://github.com/arun-test-github/nginxproxy'
+            }
+        }    
+    }
+    
+}
